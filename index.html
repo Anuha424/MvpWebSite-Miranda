@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niccolò Miranda — Interactive Artist · Amsterdam, NL</title>
+    <meta name="description" content="Old-world broadsheet portfolio of Niccolò Miranda — digital art director & interactive developer based in Amsterdam, NL." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231d1d1b'/%3E%3Ctext x='16' y='24' font-family='Georgia' font-size='22' fill='%23e2dedb' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body class="antialiased">
+    <!-- Paper grain overlay -->
+    <div class="paper-grain" aria-hidden="true"></div>
+
+    <!-- ============================ HEADER BAR ============================ -->
+    <header class="sticky top-0 z-50 bg-parchment border-b border-ink-black">
+      <div class="relative mx-auto w-full max-w-[1440px] px-7 py-4 flex items-center justify-between gap-14">
+        <p class="font-editorial-new text-[19px] font-light tracking-[-0.02em] hidden sm:block">Amsterdam, NL</p>
+        <p class="font-editorial-new text-[19px] font-light tracking-[-0.02em] absolute left-1/2 -translate-x-1/2 whitespace-nowrap hidden md:block">The Niccolò Portfolio</p>
+        <button id="menu-btn" class="hamburger flex flex-col gap-[5px] items-end p-2 cursor-pointer ml-auto sm:ml-0" aria-label="Open menu" aria-expanded="false">
+          <span class="w-7"></span>
+          <span class="w-5"></span>
+          <span class="w-7"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ============================ MENU OVERLAY ============================ -->
+    <div id="menu-overlay" class="fixed inset-0 z-[55] bg-ink-black text-parchment flex flex-col justify-center px-10 md:px-20">
+      <nav class="flex flex-col gap-6">
+        <a href="#work" class="menu-item banner-word !text-left font-canopee text-[clamp(48px,10vw,122px)] leading-[0.9] tracking-[-0.04em] hover:text-ember-orange transition-colors duration-300">Work.</a>
+        <a href="#about" class="menu-item banner-word !text-left font-canopee text-[clamp(48px,10vw,122px)] leading-[0.9] tracking-[-0.04em] hover:text-ember-orange transition-colors duration-300">About.</a>
+        <a href="#art" class="menu-item banner-word !text-left font-canopee text-[clamp(48px,10vw,122px)] leading-[0.9] tracking-[-0.04em] hover:text-ember-orange transition-colors duration-300">Art.</a>
+        <a href="#contact" class="menu-item banner-word !text-left font-canopee text-[clamp(48px,10vw,122px)] leading-[0.9] tracking-[-0.04em] hover:text-ember-orange transition-colors duration-300">Contact.</a>
+      </nav>
+      <p class="menu-item mt-16 font-editorial-new text-[16px] font-light text-bone-cream flex flex-wrap gap-x-7 gap-y-2">
+        <span>Instagram</span><span>Awwwards</span><span>LinkedIn</span><span>hello@miranda.art</span>
+      </p>
+    </div>
+
+    <main class="mx-auto w-full max-w-[1440px] px-7">
+
+      <!-- ============================ FEATURED STRIP (image / type / image) ============================ -->
+      <section id="work" class="pt-43 pb-43 grid grid-cols-1 md:grid-cols-3 gap-14 items-center reveal">
+        <figure class="overflow-hidden aspect-[4/5] shadow-sm-2">
+          <img src="/img/featured-left.svg" alt="Moody warm-wood studio interior illustration" class="project-thumb w-full h-full object-cover" loading="lazy" />
+        </figure>
+
+        <div class="text-center flex flex-col items-center gap-14">
+          <h1 class="font-canopee font-normal text-[clamp(65px,7vw,86px)] leading-[0.79] tracking-[-0.06em] uppercase">All&nbsp;Work!</h1>
+          <p class="font-editorial-new text-[17px] font-light leading-[1.27] tracking-[-0.02em] max-w-[28ch] mx-auto">
+            Selected projects from the archive — interactive craft, printed matter and code, 2019–2026.
+          </p>
+          <a href="#grid" class="link-editorial font-editorial-new text-[16px] font-light">Scroll the edition ↓</a>
+        </div>
+
+        <figure class="overflow-hidden aspect-[4/5] shadow-sm-2">
+          <img src="/img/featured-right.svg" alt="Cool blue retail space illustration" class="project-thumb w-full h-full object-cover" loading="lazy" />
+        </figure>
+      </section>
+
+      <!-- ============================ MIRANDA BANNER ============================ -->
+      <section class="banner-block -mx-7 bg-ink-black py-14 overflow-hidden" aria-label="Miranda">
+        <span class="banner-word banner-word--tight text-parchment select-none">MIRANDA</span>
+        <p class="text-center font-editorial-new text-[14px] font-light tracking-[0.3em] uppercase text-charcoal mt-10 mb-[-8px]">Interactive&nbsp;Artist&nbsp;·&nbsp;Est.&nbsp;18/10/1995&nbsp;·&nbsp;Amsterdam</p>
+      </section>
+
+      <!-- ============================ DROP CAP BIO ============================ -->
+      <section id="about" class="py-43 grid grid-cols-1 md:grid-cols-2 gap-14 items-start reveal">
+        <div class="flex gap-7">
+          <span class="font-canopee text-[86px] leading-[0.73] float-left select-none" aria-hidden="true">N</span>
+          <p class="font-editorial-new text-[19px] font-light leading-[1.36] tracking-[-0.02em] max-w-[46ch]">
+            iccolò Miranda is a digital art director and creative developer who treats the browser like a printing press.
+            His work borrows the muscle of 19th-century woodblock posters — colliding serifs, heavy ink, one hand-stamped
+            seal of color — and rebuilds it in WebGL, motion and type that refuses to behave. Previously at Studio Luchthaven
+            and AVRO&amp;KO; now independent, taking on select collaborations worldwide.
+          </p>
+        </div>
+        <h2 class="font-canopee font-normal text-[clamp(43px,5vw,72px)] leading-[0.81] tracking-[-0.05em] uppercase">
+          Creative developer based in Amsterdam,&nbsp;NL.
+        </h2>
+      </section>
+
+      <!-- ============================ PROJECT GRID ============================ -->
+      <section id="grid" class="pb-43">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-14">
+
+          <article class="project-card flex flex-col gap-14 reveal cursor-pointer">
+            <figure class="overflow-hidden aspect-[4/3] shadow-sm">
+              <img src="/img/proj-avroko.svg" alt="AVRO&KO project thumbnail" class="project-thumb w-full h-full object-cover" loading="lazy" />
+            </figure>
+            <div class="flex flex-col gap-10">
+              <h3 class="font-editorial-new text-[20px] font-light tracking-[-0.02em] flex items-center gap-10">
+                AVRO&amp;KO <span class="badge-new">NEW</span>
+              </h3>
+              <div class="project-title-rule h-px bg-ink-black"></div>
+              <p class="font-editorial-new text-[16px] font-light leading-[1.27] tracking-[-0.01em] text-ink-black max-w-[36ch]">
+                An identity and webshop for a Rotterdam vinyl duo — every add-to-cart pressed like a stamp.
+              </p>
+              <p class="font-editorial-new text-caption leading-[1.18] tracking-[-0.27px] text-charcoal">Art Direction · AVRO&amp;KO · 2026</p>
+            </div>
+          </article>
+
+          <article class="project-card flex flex-col gap-14 reveal cursor-pointer">
+            <figure class="overflow-hidden aspect-[4/3] shadow-sm">
+              <img src="/img/proj-houten.svg" alt="Houten Handelaar project thumbnail" class="project-thumb w-full h-full object-cover" loading="lazy" />
+            </figure>
+            <div class="flex flex-col gap-10">
+              <h3 class="font-editorial-new text-[20px] font-light tracking-[-0.02em] flex items-center gap-10">
+                Houten Handelaar <span class="badge-new">NEW</span>
+              </h3>
+              <div class="project-title-rule h-px bg-ink-black"></div>
+              <p class="font-editorial-new text-[16px] font-light leading-[1.27] tracking-[-0.01em] text-ink-black max-w-[36ch]">
+                A timber merchant's annual report rebuilt as an interactive broadsheet with scroll-set headlines.
+              </p>
+              <p class="font-editorial-new text-caption leading-[1.18] tracking-[-0.27px] text-charcoal">Dev &amp; Design · Studio Luchthaven · 2025</p>
+            </div>
+          </article>
+
+          <article class="project-card flex flex-col gap-14 reveal cursor-pointer">
+            <figure class="overflow-hidden aspect-[4/3] shadow-sm">
+              <img src="/img/proj-noorder.svg" alt="Noorderlicht FM project thumbnail" class="project-thumb w-full h-full object-cover" loading="lazy" />
+            </figure>
+            <div class="flex flex-col gap-10">
+              <h3 class="font-editorial-new text-[20px] font-light tracking-[-0.02em] flex items-center gap-10">
+                Noorderlicht FM <span class="badge-new">NEW</span>
+              </h3>
+              <div class="project-title-rule h-px bg-ink-black"></div>
+              <p class="font-editorial-new text-[16px] font-light leading-[1.27] tracking-[-0.01em] text-ink-black max-w-[36ch]">
+                Radio reimagined — sound-reactive typography that typesets itself live from the airwaves.
+              </p>
+              <p class="font-editorial-new text-caption leading-[1.18] tracking-[-0.27px] text-charcoal">Interactive · NPO Radio · 2025</p>
+            </div>
+          </article>
+
+          <article class="project-card flex flex-col gap-14 reveal cursor-pointer">
+            <figure class="overflow-hidden aspect-[4/3] shadow-sm">
+              <img src="/img/proj-kruid.svg" alt="Kruidenborg project thumbnail" class="project-thumb w-full h-full object-cover" loading="lazy" />
+            </figure>
+            <div class="flex flex-col gap-10">
+              <h3 class="font-editorial-new text-[20px] font-light tracking-[-0.02em] flex items-center gap-10">
+                Kruidenborg <span class="badge-new">NEW</span>
+              </h3>
+              <div class="project-title-rule h-px bg-ink-black"></div>
+              <p class="font-editorial-new text-[16px] font-light leading-[1.27] tracking-[-0.01em] text-ink-black max-w-[36ch]">
+                An apothecary garden shop where each product page is a hand-set herbal placard.
+              </p>
+              <p class="font-editorial-new text-caption leading-[1.18] tracking-[-0.27px] text-charcoal">Design &amp; Build · Independent · 2024</p>
+            </div>
+          </article>
+
+          <article class="project-card flex flex-col gap-14 reveal cursor-pointer">
+            <figure class="overflow-hidden aspect-[4/3] shadow-sm">
+              <img src="/img/proj-vecht.svg" alt="Vecht Print Club project thumbnail" class="project-thumb w-full h-full object-cover" loading="lazy" />
+            </figure>
+            <div class="flex flex-col gap-10">
+              <h3 class="font-editorial-new text-[20px] font-light tracking-[-0.02em] flex items-center gap-10">
+                Vecht Print Club <span class="badge-new">NEW</span>
+              </h3>
+              <div class="project-title-rule h-px bg-ink-black"></div>
+              <p class="font-editorial-new text-[16px] font-light leading-[1.27] tracking-[-0.01em] text-ink-black max-w-[36ch]">
+                Letterpress membership site — members commission editions and vote on the month's poster.
+              </p>
+              <p class="font-editorial-new text-caption leading-[1.18] tracking-[-0.27px] text-charcoal">Full-stack · Vecht Club · 2024</p>
+            </div>
+          </article>
+
+          <article class="project-card flex flex-col gap-14 reveal cursor-pointer">
+            <figure class="overflow-hidden aspect-[4/3] shadow-sm">
+              <img src="/img/proj-zwart.svg" alt="Zwartvier Type foundry microsite project thumbnail" class="project-thumb w-full h-full object-cover" loading="lazy" />
+            </figure>
+            <div class="flex flex-col gap-10">
+              <h3 class="font-editorial-new text-[20px] font-light tracking-[-0.02em] flex items-center gap-10">
+                Zwartvier Foundry <span class="badge-new">NEW</span>
+              </h3>
+              <div class="project-title-rule h-px bg-ink-black"></div>
+              <p class="font-editorial-new text-[16px] font-light leading-[1.27] tracking-[-0.01em] text-ink-black max-w-[36ch]">
+                A variable-font specimen site where glyphs collide and re-set themselves on hover.
+              </p>
+              <p class="font-editorial-new text-caption leading-[1.18] tracking-[-0.27px] text-charcoal">Type &amp; Web · Zwartvier · 2023</p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============================ WEBSITE BANNER ============================ -->
+      <section class="banner-block -mx-7 bg-ink-black py-14 overflow-hidden" aria-label="Website">
+        <span class="banner-word banner-word--tight text-parchment select-none">WEBSITE</span>
+      </section>
+
+      <!-- ============================ PORTRAIT ILLUSTRATION BLOCK ============================ -->
+      <section id="art" class="py-43 grid grid-cols-1 md:grid-cols-2 gap-14 items-center reveal">
+        <figure class="overflow-hidden aspect-[3/4] shadow-sm-2">
+          <img src="/img/portrait.svg" alt="Rim-lit digital painting portrait of Niccolò Miranda" class="w-full h-full object-cover" loading="lazy" />
+        </figure>
+        <div class="flex flex-col gap-22">
+          <h2 class="font-canopee font-normal text-[clamp(43px,6vw,86px)] leading-[0.91] tracking-[-0.032em] uppercase">
+            Digital Art Director /<br />Interactive Designer
+          </h2>
+          <p class="font-domaine-display text-[22px] leading-[1.18] tracking-[-0.02em] font-medium text-charcoal max-w-[42ch]">
+            Painted in pixels, printed in code — portraits, placards and postage for people who still believe ink has weight.
+          </p>
+          <a href="#contact" class="link-editorial font-editorial-new text-[17px] font-light self-start">Commission a piece →</a>
+        </div>
+      </section>
+
+      <!-- ============================ MARQUEE TICKER ============================ -->
+      <section class="-mx-7 overflow-hidden border-y border-ink-black py-4 bg-bone-cream" aria-hidden="true">
+        <div class="marquee-track flex whitespace-nowrap font-domaine-display text-[32px] tracking-[-0.03em] uppercase">
+          <span class="flex gap-28 pr-28">
+            <em class="not-italic">Awwwards SOTD ×3</em><span class="text-ember-orange">★</span>
+            <em class="not-italic">FWA of the Day</em><span class="text-ember-orange">★</span>
+            <em class="not-italic">Type Directors Club</em><span class="text-ember-orange">★</span>
+            <em class="not-italic">Dutch Design Awards</em><span class="text-ember-orange">★</span>
+          </span>
+          <span class="flex gap-28 pr-28">
+            <em class="not-italic">Awwwards SOTD ×3</em><span class="text-ember-orange">★</span>
+            <em class="not-italic">FWA of the Day</em><span class="text-ember-orange">★</span>
+            <em class="not-italic">Type Directors Club</em><span class="text-ember-orange">★</span>
+            <em class="not-italic">Dutch Design Awards</em><span class="text-ember-orange">★</span>
+          </span>
+        </div>
+      </section>
+
+      <!-- ============================ GOTHIC IMPACT + STAMP ============================ -->
+      <section class="py-43 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-14 items-center reveal">
+        <h2 class="font-germgoth text-[clamp(64px,11vw,158px)] leading-[0.9] tracking-[-0.004em] uppercase">Ink never dries.</h2>
+
+        <!-- Stamp seal -->
+        <aside class="stamp w-[230px] p-14 flex flex-col items-center gap-7 rotate-[-4deg] shadow-sm mx-auto">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+            <g stroke="#c03f13" stroke-width="2.4" stroke-linecap="round">
+              <circle cx="28" cy="28" r="9" fill="#c03f13" stroke="none"/>
+              <line x1="28" y1="4"  x2="28" y2="13"/><line x1="28" y1="43" x2="28" y2="52"/>
+              <line x1="4"  y1="28" x2="13" y2="28"/><line x1="43" y1="28" x2="52" y2="28"/>
+              <line x1="11" y1="11" x2="17" y2="17"/><line x1="39" y1="39" x2="45" y2="45"/>
+              <line x1="45" y1="11" x2="39" y2="17"/><line x1="17" y1="39" x2="11" y2="45"/>
+            </g>
+          </svg>
+          <p class="font-domaine-display italic text-[20px] tracking-[-0.02em] -rotate-2">Niccolò Miranda</p>
+          <div class="w-full border-t border-charcoal pt-7 flex flex-col gap-4">
+            <p class="font-editorial-new text-[11px] tracking-[0.12em] uppercase text-charcoal flex justify-between"><span>Name</span><span class="text-ink-black">N. Miranda</span></p>
+            <p class="font-editorial-new text-[11px] tracking-[0.12em] uppercase text-charcoal flex justify-between"><span>Birth</span><span class="text-ink-black">18/10/1995</span></p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ============================ CONTACT ============================ -->
+      <section id="contact" class="py-43 flex flex-col gap-22 items-start reveal">
+        <h2 class="font-canopee font-normal text-[clamp(43px,6vw,86px)] leading-[0.91] tracking-[-0.04em] uppercase">Let's set some type.</h2>
+        <p class="font-editorial-new text-[19px] font-light leading-[1.36] tracking-[-0.02em] max-w-[52ch] text-ink-black">
+          Open for select collaborations in art direction, creative development and interactive design for 2026–2027.
+          Send a brief, a budget and a bad pun — <a href="mailto:hello@miranda.art" class="link-editorial">hello@miranda.art</a>.
+        </p>
+      </section>
+    </main>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="border-t border-ink-black">
+      <div class="mx-auto max-w-[1440px] px-7 py-29 grid grid-cols-1 md:grid-cols-2 gap-14">
+        <div class="flex flex-wrap gap-x-22 gap-y-7 font-editorial-new text-[16px] font-light">
+          <a href="#work" class="link-editorial">Work</a>
+          <a href="#about" class="link-editorial">About</a>
+          <a href="#art" class="link-editorial">Art</a>
+          <a href="#contact" class="link-editorial">Contact</a>
+        </div>
+        <p class="font-editorial-new text-caption leading-[1.18] tracking-[-0.27px] text-charcoal md:text-right">
+          © MMXXVI Niccolò Miranda · Set in Canopee, Domaine &amp; Editorial New · Printed on warm parchment, Amsterdam, NL
+        </p>
+      </div>
+    </footer>
+
+    <link rel="stylesheet" href="/src/main.css" />
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

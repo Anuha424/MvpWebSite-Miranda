@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Pirata+One&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-parchment: #e2dedb;
+  --color-bone-cream: #cdc6be;
+  --color-ink-black: #1d1d1b;
+  --color-charcoal: #69645f;
+  --color-pure-black: #000000;
+  --color-ember-orange: #c03f13;
+
+  /* Typography */
+  --font-editorial-new: 'Editorial New', 'Source Serif 4', ui-serif, Georgia, serif;
+  --font-canopee: 'Canopee', 'Bodoni Moda', ui-serif, Georgia, serif;
+  --font-domaine-display: 'Domaine Display', 'Playfair Display', ui-serif, Georgia, serif;
+  --font-germgoth: 'Germgoth', 'Pirata One', ui-serif, serif;
+
+  /* Typography — Scale */
+  --text-caption: 14px;
+  --leading-caption: 1.18;
+  --tracking-caption: -0.27px;
+  --text-body-sm: 16px;
+  --leading-body-sm: 1.27;
+  --tracking-body-sm: -0.16px;
+  --text-subheading: 22px;
+  --leading-subheading: 1.18;
+  --tracking-subheading: -0.55px;
+  --text-heading-sm: 32px;
+  --leading-heading-sm: 1.11;
+  --tracking-heading-sm: -0.96px;
+  --text-heading: 65px;
+  --leading-heading: 0.91;
+  --tracking-heading: -2.08px;
+  --text-heading-lg: 122px;
+  --leading-heading-lg: 0.79;
+  --tracking-heading-lg: -4.88px;
+  --text-display: 446px;
+  --leading-display: 0.73;
+  --tracking-display: -22.3px;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-7: 7px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-14: 14px;
+  --spacing-17: 17px;
+  --spacing-22: 22px;
+  --spacing-28: 28px;
+  --spacing-29: 29px;
+  --spacing-36: 36px;
+  --spacing-43: 43px;
+  --spacing-58: 58px;
+  --spacing-65: 65px;
+  --spacing-115: 115px;
+
+  /* Border Radius */
+  --radius-sm: 2.88px;
+  --radius-lg: 7.2px;
+  --radius-xl: 11.52px;
+
+  /* Shadows */
+  --shadow-sm: rgba(29, 29, 27, 0.2) -4px 4px 6px 0px;
+  --shadow-sm-2: rgba(29, 29, 27, 0.2) -5px 3px 6px 0px;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+html, body { overflow-x: hidden; }
+
+body {
+  background-color: var(--color-parchment);
+  color: var(--color-ink-black);
+  font-family: var(--font-editorial-new);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-ember-orange);
+  color: var(--color-parchment);
+}
+
+/* Subtle paper grain over the whole sheet */
+.paper-grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---------- Display banner letter collision ---------- */
+.banner-word {
+  font-family: var(--font-canopee);
+  font-weight: 400;
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+  text-align: center;
+  line-height: 0.73;
+  letter-spacing: -0.05em;
+  font-size: clamp(64px, 20vw, 446px);
+}
+
+.banner-word--tight {
+  letter-spacing: -0.089em;
+}
+
+/* ---------- Text links ---------- */
+.link-editorial {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  color: var(--color-ink-black);
+  transition: color 0.2s ease;
+}
+.link-editorial:hover {
+  color: var(--color-pure-black);
+  text-decoration-thickness: 2px;
+}
+
+/* ---------- NEW badge ---------- */
+.badge-new {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-ember-orange);
+  color: #fff;
+  font-family: var(--font-editorial-new);
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+  padding: 4px 6px;
+  transform: translateY(-2px);
+}
+
+/* ---------- Stamp seal perforated edge ---------- */
+.stamp {
+  background: var(--color-parchment);
+  border-radius: var(--radius-xl);
+  position: relative;
+}
+.stamp::before {
+  content: '';
+  position: absolute;
+  inset: -7px;
+  z-index: -1;
+  border-radius: calc(var(--radius-xl) + 7px);
+  background:
+    radial-gradient(circle at center, var(--color-bone-cream) 4.5px, transparent 5px) repeat;
+  background-size: 14px 14px;
+  background-position: 7px 7px;
+}
+
+/* ---------- Hamburger ---------- */
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--color-ink-black);
+  border-radius: 1px;
+  transition: transform 0.3s ease, width 0.3s ease;
+}
+.hamburger:hover span:nth-child(1) { transform: translateX(4px); }
+.hamburger:hover span:nth-child(3) { transform: translateX(-4px); }
+
+/* ---------- Menu overlay ---------- */
+#menu-overlay {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+}
+#menu-overlay.open {
+  clip-path: inset(0 0 0% 0);
+}
+#menu-overlay .menu-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+#menu-overlay.open .menu-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+#menu-overlay.open .menu-item:nth-child(1) { transition-delay: 0.25s; }
+#menu-overlay.open .menu-item:nth-child(2) { transition-delay: 0.33s; }
+#menu-overlay.open .menu-item:nth-child(3) { transition-delay: 0.41s; }
+#menu-overlay.open .menu-item:nth-child(4) { transition-delay: 0.49s; }
+
+/* ---------- Reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Card hover ---------- */
+.project-card .project-thumb {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.project-card:hover .project-thumb {
+  transform: scale(1.03);
+}
+.project-card .project-title-rule {
+  transition: width 0.4s ease;
+  width: 0;
+}
+.project-card:hover .project-title-rule {
+  width: 100%;
+}
+
+/* Marquee ticker */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 26s linear infinite;
+}
+
+/* Banner slight press-in on load */
+@keyframes banner-drop {
+  from { transform: translateY(-14px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.banner-block {
+  animation: banner-drop 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}

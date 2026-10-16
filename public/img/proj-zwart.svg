@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+<defs>
+  <radialGradient id="vig8" cx="50%" cy="42%" r="75%">
+    <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.42"/>
+  </radialGradient>
+</defs>
+<rect width="800" height="600" fill="#e2dedb"/><line x1="0" y1="60" x2="800" y2="60" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><line x1="0" y1="120" x2="800" y2="120" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><line x1="0" y1="180" x2="800" y2="180" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><line x1="0" y1="240" x2="800" y2="240" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><line x1="0" y1="300" x2="800" y2="300" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><line x1="0" y1="360" x2="800" y2="360" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><line x1="0" y1="420" x2="800" y2="420" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><line x1="0" y1="480" x2="800" y2="480" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><line x1="0" y1="540" x2="800" y2="540" stroke="#1d1d1b" stroke-width="1.5" opacity="0.35"/><text x="40" y="360.0" font-family="Georgia,serif" font-size="300" fill="#1d1d1b" font-style="italic">A</text><text x="340" y="324.0" font-family="Georgia,serif" font-size="240" fill="#1d1d1b" font-style="italic">R</text><text x="586" y="300.0" font-family="Georgia,serif" font-size="200" fill="#1d1d1b" font-style="italic">&amp;</text><text x="796" y="336.0" font-family="Georgia,serif" font-size="260" fill="#1d1d1b" font-style="italic">Q</text><text x="1060" y="288.0" font-family="Georgia,serif" font-size="180" fill="#1d1d1b" font-style="italic">g</text><text x="400" y="470" font-family="Georgia,serif" font-size="230" font-weight="bold" fill="#1d1d1b" text-anchor="middle" letter-spacing="-14">ZV·4</text><rect x="620" y="60" width="120" height="120" fill="#c03f13"/><text x="680" y="135" font-family="Georgia,serif" font-size="44" fill="#e2dedb" text-anchor="middle">NEW</text><text x="40" y="560" font-family="Georgia,serif" font-size="22" fill="#69645f" letter-spacing="6">ZWARTVIER — VARIABLE SPECIMEN</text>
+<rect width="800" height="600" fill="url(#vig8)"/>
+<filter id="grain8" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="8" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+    </filter>
+    <rect x="0" y="0" width="800" height="600" filter="url(#grain8)" opacity="0.06"/>
+</svg>

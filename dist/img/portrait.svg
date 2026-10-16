@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200">
+<defs>
+  <radialGradient id="vig7" cx="50%" cy="42%" r="75%">
+    <stop offset="55%" stop-color="#000" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#000" stop-opacity="0.42"/>
+  </radialGradient>
+</defs>
+<rect width="900" height="1200" fill="#241a12"/>
+    <ellipse cx="450" cy="500" rx="420" ry="520" fill="#3a2a1a" opacity="0.7"/>
+    <ellipse cx="450" cy="460" rx="300" ry="400" fill="#4a3623" opacity="0.6"/><path d="M150 1200 Q170 900 300 830 L600 830 Q730 900 750 1200 Z" fill="#1d1d1b"/>
+    <path d="M300 830 L450 1000 L600 830 L520 830 L450 930 L380 830 Z" fill="#2b2b28"/><rect x="400" y="700" width="100" height="160" fill="#8a5a3b"/><ellipse cx="450" cy="520" rx="170" ry="220" fill="#9a6a45"/>
+    <ellipse cx="450" cy="520" rx="170" ry="220" fill="#7a4e30" opacity="0.55"/><path d="M280 470 Q280 260 450 260 Q620 260 620 470 Q600 360 450 350 Q320 360 280 470 Z" fill="#1d1d1b"/>
+    <path d="M285 480 Q300 560 292 640 L322 620 Q310 540 315 480 Z" fill="#1d1d1b"/>
+    <path d="M615 480 Q600 560 608 640 L578 620 Q590 540 585 480 Z" fill="#1d1d1b"/><path d="M320 600 Q450 800 580 600 Q560 740 450 760 Q340 740 320 600 Z" fill="#2b2016" opacity="0.8"/><path d="M380 500 q 25 -14 50 0" stroke="#3a2416" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M470 500 q 25 -14 50 0" stroke="#3a2416" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <circle cx="405" cy="520" r="9" fill="#1a0f08"/><circle cx="495" cy="520" r="9" fill="#1a0f08"/>
+    <path d="M450 530 l -12 78 q 12 10 26 4" stroke="#5a3a22" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M410 640 q 40 26 84 0" stroke="#3a2416" stroke-width="9" fill="none" stroke-linecap="round"/>
+    <path d="M360 440 q 40 -22 84 -14 M456 426 q 44 -8 84 14" stroke="#1d1d1b" stroke-width="10" fill="none" stroke-linecap="round"/><path d="M600 330 Q660 480 610 660 Q590 730 560 780" stroke="#e2dedb" stroke-width="14" fill="none" opacity="0.9" stroke-linecap="round"/>
+    <path d="M612 350 Q668 480 620 650" stroke="#f3e9d6" stroke-width="6" fill="none" opacity="0.7" stroke-linecap="round"/>
+    <path d="M596 300 Q640 340 636 400" stroke="#e2dedb" stroke-width="10" fill="none" opacity="0.6" stroke-linecap="round"/>
+    <path d="M620 840 Q700 900 726 1060" stroke="#e2dedb" stroke-width="10" fill="none" opacity="0.5" stroke-linecap="round"/>
+    <path d="M292 360 Q262 480 300 640" stroke="#c03f13" stroke-width="7" fill="none" opacity="0.5" stroke-linecap="round"/><path d="M310 840 L450 990 L590 840" stroke="#e2dedb" stroke-width="6" fill="none" opacity="0.5"/>
+<rect width="900" height="1200" fill="url(#vig7)"/>
+<filter id="grain7" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="7" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+    </filter>
+    <rect x="0" y="0" width="900" height="1200" filter="url(#grain7)" opacity="0.06"/>
+</svg>

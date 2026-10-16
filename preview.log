@@ -1,0 +1,9 @@
+
+> miranda-site@1.0.0 dev
+> vite --host 0.0.0.0 --port 5173
+
+
+  VITE v5.4.21  ready in 507 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://21.0.9.136:5173/
